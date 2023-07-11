@@ -1,0 +1,9 @@
+Chapter 1 exercies:
+
+1 - Whitespaces are newline, space and tab, which are invisible characters.
+2 - A comment is a part of source code that doesn't do nothing /correction: and that is not compiled/.
+    It's mainly used by devs to explain what the code do. It starts with // for inline comments, and is
+    surronded by /* ... */ for multiline comments.
+3 - The files in the fmt package should beggin with "package fmt".
+4 - In order to use the Exit function from os package, we need to call "import "os"" and then call the "os.Exit()" function.
+5 - Change the line "fmt.Println("Hello World!")" with "fmt.Println("Hello, my name is Guillaume")".
