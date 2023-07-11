@@ -1,0 +1,10 @@
+go 1.20
+
+use (
+	./greetings
+	./hello
+	./pro_go/basicfeatures
+	./pro_go/partyinvites
+	./pro_go/tools
+	./system_programming/section_2
+)
