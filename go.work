@@ -4,6 +4,7 @@ use (
 	./greetings
 	./hello
 	./pro_go/basicfeatures
+	./pro_go/operations
 	./pro_go/partyinvites
 	./pro_go/tools
 	./system_programming/section_2

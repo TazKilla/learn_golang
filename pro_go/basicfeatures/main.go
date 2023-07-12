@@ -2,13 +2,27 @@ package main
 
 import (
 	"fmt"
+	"sort"
 	// "math/rand"
 )
 
 func main() {
-	var price float32 = 275
-	var tax float32 = 27.50
-	fmt.Println(price + tax)
-	price = 300
-	fmt.Println(price + tax)
+	
+	// first := 100
+	// second := &first
+	// third := &second
+
+	// fmt.Println(first)
+	// fmt.Println(*second)
+	// fmt.Println(**third)
+
+	names := [3]string {"Alice", "Charlie", "Bob"}
+	secondName := names[1]
+	secondPosition := &names[1]
+
+	fmt.Println(secondName)
+	fmt.Println(*secondPosition)
+	sort.Strings(names[:])
+	fmt.Println(secondName)
+	fmt.Println(*secondPosition)
 }
