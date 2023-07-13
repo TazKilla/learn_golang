@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"strconv"
 )
 
 func main() {
@@ -118,4 +119,60 @@ func main() {
 	maxMph := 50
 	passengerCapacity := 4
 	airbags := true
+
+	familyCar := passengerCapacity > 2 && airbags
+	sportsCar := maxMph > 100 || passengerCapacity == 2
+	canCategorize := !familyCar && !sportsCar
+
+	fmt.Println(familyCar)
+	fmt.Println(sportsCar)
+	fmt.Println(canCategorize)
+
+	// Converting, Parsing and Formatting Values
+	fmt.Println("--------------------------------")
+	fmt.Println("Convert, Parse and Format Values")
+	fmt.Println("--------------------------------")
+
+	kayak := 275
+	soccerBall := 19.50
+
+	total := float64(kayak) + soccerBall
+
+	fmt.Println(total)
+
+	// Limitations of Explicit Conversion
+	fmt.Println("--------------------------------")
+	fmt.Println(" Limits of Explicit Conversions ")
+	fmt.Println("--------------------------------")
+
+	total2 := kayak + int(soccerBall)
+
+	fmt.Println(total2)
+	fmt.Println(int8(total2))
+
+	// Converting floating-Point Values to Integers
+	fmt.Println("--------------------------------")
+	fmt.Println("Convert Float Values to Integers")
+	fmt.Println("--------------------------------")
+
+	total3 := kayak + int(math.Round(soccerBall))
+
+	fmt.Println(total3)
+
+	// Parsing from Strings
+	fmt.Println("--------------------------------")
+	fmt.Println("      Parsing from Strings      ")
+	fmt.Println("--------------------------------")
+
+	val1 := "true"
+	val2 := "false"
+	val3 := "not true"
+
+	bool1, b1err := strconv.ParseBool(val1)
+	bool2, b2err := strconv.ParseBool(val2)
+	bool3, b3err := strconv.ParseBool(val3)
+
+	fmt.Println("Bool 1", bool1, b1err)
+	fmt.Println("Bool 2", bool2, b2err)
+	fmt.Println("Bool 3", bool3, b3err)
 }	
